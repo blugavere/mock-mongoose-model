@@ -20,7 +20,7 @@ sinon.stub(MockMongooseModel, 'findOne').yields(null, { name: 'whiskers' });
 
 // use it somewhere
 MockMongooseModel.findOne({ name: 'whiskers' }, (err, doc) => {
-  assert(doc.name === whiskers);
+  assert(doc.name === 'whiskers');
 });
 
 // for multiple mongoose models, use Object.assign({}, MockMongooseModel);
