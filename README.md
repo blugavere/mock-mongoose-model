@@ -10,10 +10,23 @@ $ npm install --save mock-mongoose-model
 ## Usage
 
 ```js
-var mockMongooseModel = require('mock-mongoose-model');
 
-mockMongooseModel('Rainbow');
+const assert = require('assert');
+const sinon = require('sinon');
+const MockMongooseModel = require('mock-mongoose-model');
+
+// stub the mock
+sinon.stub(MockMongooseModel, 'findOne').yields(null, { name: 'whiskers' });
+
+// use it somewhere
+MockMongooseModel.findOne({ name: 'whiskers' }, (err, doc) => {
+  assert(doc.name === whiskers);
+});
+
+// for multiple mongoose models, use Object.assign({}, MockMongooseModel);
+
 ```
+
 ## License
 
 Apache-2.0 © [blugavere](http://benlugavere.com)
