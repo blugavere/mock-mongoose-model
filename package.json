@@ -48,7 +48,7 @@
       "mocha": true
     }
   },
-  "repository": "git@github.com:blugavere/mock-mongoose-model.git",
+  "repository": "blugavere/mock-mongoose-model.git",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
