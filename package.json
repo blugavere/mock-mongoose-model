@@ -48,7 +48,7 @@
       "mocha": true
     }
   },
-  "repository": "blugavere/mock-mongoose-model.git",
+  "repository": "blugavere/mock-mongoose-model",
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp"
