@@ -39,5 +39,4 @@ Model.updateMany = () => {};
 Model.select = () => {};
 Model.add = () => {};
 
-
 module.exports = Model;

@@ -9,9 +9,9 @@
     "url": "http://benlugavere.com"
   },
   "files": [
-    "dist"
+    "src"
   ],
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "keywords": [
     "mock",
     "mongoose",
@@ -20,32 +20,16 @@
     "test"
   ],
   "devDependencies": {
-    "del": "^2.0.2",
+    "coveralls": "^2.13.1",
     "eslint": "^3.1.1",
-    "eslint-config-xo-space": "^0.15.0",
     "expect": "^1.20.2",
-    "gulp": "^3.9.0",
-    "gulp-coveralls": "^0.1.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^1.0.0",
-    "gulp-line-ending-corrector": "^1.0.1",
-    "gulp-mocha": "^3.0.1",
-    "gulp-nsp": "^2.1.0",
-    "gulp-plumber": "^1.0.0",
-    "isparta": "^4.0.0",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
     "sinon": "^1.17.7"
-  },
-  "eslintConfig": {
-    "extends": "xo-space",
-    "env": {
-      "mocha": true
-    }
   },
   "repository": "blugavere/mock-mongoose-model",
   "scripts": {
-    "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "make test"
   },
   "license": "Apache-2.0"
 }
