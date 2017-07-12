@@ -1,4 +1,4 @@
-# mock-mongoose-model 
+# mock-mongoose-model
 [![NPM version][npm-image]][npm-url] 
 [![Build Status][travis-image]][travis-url] 
 [![Dependency Status][daviddm-image]][daviddm-url] 
