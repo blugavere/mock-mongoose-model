@@ -1,3 +1,4 @@
+sudo: false
 language: node_js
 node_js:
   - v7
@@ -6,3 +7,6 @@ node_js:
   - v4
   - '0.12'
 after_success: make coverage
+cache:
+  directories:
+  - node_modules
