@@ -25,4 +25,10 @@ describe('mock-mongoose-model', () => {
     assert(model1.findOne.called === true, 'we expected to be able to dupe instances.');
     assert(model2.findOne.called === false);
   });
+  it('should allow for chainable methods by only stubbing the final method', () => {
+    const model = Object.assign({}, MockMongooseModel);
+    sinon.stub(model, 'exec');
+    model.find().sort().exec();
+    assert(model.exec.called === true);
+  });
 });

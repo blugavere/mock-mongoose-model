@@ -9,34 +9,43 @@ const Model = function (obj) {
   Object.assign(this, obj);
 };
 
-Model.aggregate = () => {};
-Model.count = () => {};
-Model.create = () => {};
-Model.distinct = () => {};
-Model.ensureIndexes = () => {};
-Model.find = () => {};
-Model.findById = () => {};
-Model.findByIdAndRemove = () => {};
-Model.findByIdAndUpdate = () => {};
-Model.findOne = () => {};
-Model.findOneAndRemove = () => {};
-Model.findOneAndUpdate = () => {};
-Model.geoNear = () => {};
-Model.geoSearch = () => {};
-Model.index = () => {};
-Model.mapReduce = () => {};
-Model.lean = () => {};
-Model.exec = () => {};
-Model.plugin = () => {};
-Model.populate = () => {};
-Model.remove = () => {};
-Model.set = () => {};
-Model.update = () => {};
-Model.where = () => {};
-Model.toObject = () => {};
-Model.toString = () => {};
-Model.updateMany = () => {};
-Model.select = () => {};
-Model.add = () => {};
+const defaultMethods = [
+    'aggregate',
+    'count',
+    'create',
+    'distinct',
+    'ensureIndexes',
+    'find',
+    'findById',
+    'findByIdAndRemove',
+    'findByIdAndUpdate',
+    'findOne',
+    'findOneAndRemove',
+    'findOneAndUpdate',
+    'geoNear',
+    'geoSearch',
+    'index',
+    'mapReduce',
+    'lean',
+    'exec',
+    'plugin',
+    'populate',
+    'remove',
+    'set',
+    'update',
+    'where',
+    'toObject',
+    'toString',
+    'updateMany',
+    'select',
+    'add',
+    'sort'
+];
+
+defaultMethods.forEach(method => {
+    Model[method] = function() {
+        return this;
+    };
+});
 
 module.exports = Model;
