@@ -12,3 +12,6 @@ lint:
 
 coverage:
 	./node_modules/.bin/nyc report --reporter=text-lcov | coveralls
+
+link:
+	npm link
