@@ -1,4 +1,4 @@
-.PHONY: test
+.PHONY: test coverage
 
 clean:
 	rm -rf coverage dist .nyc_output
