@@ -10,6 +10,11 @@ const methods = require('./methods');
  */
 describe('Mockgoose', () => {
   describe('methods', () => {
+    it('should have methods', () => {
+      const sanityMethods = ['add', 'find', 'remove'];
+      expect(sanityMethods.every(method => methods.includes(method))).toBe(true);
+    });
+
     methods.forEach(x => {
       it(`should have a ${x} method`, () => {
         Mockgoose[x]();
