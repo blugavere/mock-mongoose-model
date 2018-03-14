@@ -12,7 +12,7 @@ describe('Mockgoose', () => {
   describe('methods', () => {
     it('should have methods', () => {
       const sanityMethods = ['add', 'find', 'remove'];
-      expect(sanityMethods.every(method => methods.includes(method))).toBe(true);
+      expect(sanityMethods.every(method => methods.indexOf(method) > -1)).toBe(true);
     });
 
     methods.forEach(x => {
