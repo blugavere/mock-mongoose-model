@@ -2,6 +2,7 @@
 
 const expect = require('expect');
 const Mockgoose = require('.');
+const methods = require('./methods');
 
 /**
  * standalone
@@ -9,34 +10,6 @@ const Mockgoose = require('.');
  */
 describe('Mockgoose', () => {
   describe('methods', () => {
-    const methods = [
-      'aggregate',
-      'count',
-      'create',
-      'distinct',
-      'ensureIndexes',
-      'find',
-      'findById',
-      'findByIdAndRemove',
-      'findByIdAndUpdate',
-      'findOne',
-      'findOneAndRemove',
-      'findOneAndUpdate',
-      'geoNear',
-      'geoSearch',
-      'index',
-      'mapReduce',
-      'plugin',
-      'populate',
-      'remove',
-      'set',
-      'update',
-      'where',
-      'lean',
-      'exec',
-      'toObject',
-      'toString'
-    ];
     methods.forEach(x => {
       it(`should have a ${x} method`, () => {
         Mockgoose[x]();

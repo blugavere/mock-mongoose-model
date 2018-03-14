@@ -28,6 +28,13 @@ MockMongooseModel.findOne({ name: 'whiskers' }, (err, doc) => {
   assert(doc.name === 'whiskers');
 });
 
+// supports method chaining
+sinon.stub(MockMongooseModel, 'exec').yields(null, { name: 'rex' });
+
+MockMongooseModel.findById('1').select('name').exec((err, doc) => {
+  assert(doc.name === 'rex')
+});
+
 // for multiple mongoose models, use Object.assign({}, MockMongooseModel);
 
 ```
