@@ -1,6 +1,6 @@
 {
   "name": "mock-mongoose-model",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Mock mongoose model to use for unit testing.",
   "homepage": "",
   "author": {
