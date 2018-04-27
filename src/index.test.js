@@ -1,8 +1,8 @@
 'use strict';
 
-const expect = require('expect');
 const Mockgoose = require('.');
 const methods = require('./methods');
+const assert = require('assert');
 
 /**
  * standalone
@@ -12,13 +12,13 @@ describe('Mockgoose', () => {
   describe('methods', () => {
     it('should have methods', () => {
       const sanityMethods = ['add', 'find', 'remove'];
-      expect(sanityMethods.every(method => methods.indexOf(method) > -1)).toBe(true);
+      assert.equal(sanityMethods.every(method => methods.indexOf(method) > -1), true);
     });
 
     methods.forEach(x => {
       it(`should have a ${x} method`, () => {
         Mockgoose[x]();
-        expect(typeof Mockgoose[x]).toBe('function');
+        assert.equal(typeof Mockgoose[x], 'function');
       });
     });
   });
@@ -27,8 +27,9 @@ describe('Mockgoose', () => {
       const model = new Mockgoose({
         foo: 'bar'
       });
-      expect(model instanceof Mockgoose).toBe(true);
-      expect(model.foo).toEqual('bar');
+
+      assert(model instanceof Mockgoose, true);
+      assert(model.foo, 'bar');
     });
   });
 });

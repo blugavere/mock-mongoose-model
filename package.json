@@ -20,12 +20,11 @@
     "test"
   ],
   "devDependencies": {
-    "coveralls": "^2.13.1",
-    "eslint": "^3.1.1",
-    "expect": "^1.20.2",
-    "mocha": "^3.4.2",
-    "nyc": "^11.0.3",
-    "sinon": "^1.17.7"
+    "coveralls": "^3.0.0",
+    "eslint": "^4.19.1",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "sinon": "^4.5.0"
   },
   "repository": "blugavere/mock-mongoose-model",
   "scripts": {
