@@ -19,6 +19,7 @@ module.exports = [
     'geoNear',
     'geoSearch',
     'index',
+    'insertMany',
     'lean',
     'lean',
     'limit',
