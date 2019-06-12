@@ -4,6 +4,7 @@ module.exports = [
     'add',
     'aggregate',
     'count',
+    'countDocuments',
     'create',
     'distinct',
     'ensureIndexes',
